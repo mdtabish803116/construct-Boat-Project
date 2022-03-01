@@ -97,3 +97,11 @@ p{
     text-align: center;
     font-size: 12px;
 }
+.icons{
+   display: flex;
+   border: 1px solid orangered;
+   margin-top: 200px;
+}
+.icons>div{
+    margin: 8px;
+}
