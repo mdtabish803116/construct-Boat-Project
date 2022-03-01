@@ -63,3 +63,37 @@ a{
     text-decoration: none;
     color:gainsboro;
 }
+#built{
+    display: flex;
+    border: 1px solid green;
+    color: white;
+    margin:220px;
+    margin-top: none;
+    
+}
+#built > div{
+    margin: auto;
+}
+p{
+    font-weight: 500;
+}
+.box{
+    /* height: 20px; */
+    width: 100px;
+    /* border: 10px solid yellowgreen; */
+}
+.box2{
+    width: 100px;
+}
+#size{
+    padding: 10px;
+    border-radius: 10px;
+}
+#size2{
+    padding: 10px;
+    border-radius: 10px;
+}
+.copyright{
+    text-align: center;
+    font-size: 12px;
+}
