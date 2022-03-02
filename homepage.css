@@ -151,7 +151,23 @@ body {
     padding-left : 180px;
 }
 
-
+/* advertisement */
+.img_container{
+    background-color: black;
+    border: 1px solid red;
+}
+#img_flex{
+    display: flex;
+}
+.magi{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.magi>img{
+    width: 30%;
+   
+}
 
 
 #first-footer{
