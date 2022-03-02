@@ -137,12 +137,15 @@ body {
     background-color: black;
     align-items : center;
     padding-top : 30px;
+    margin: 30px;
 }
 
 #containers > img {
     width : 330px;
     height : 170px;
     padding-top : 50px;
+    margin: 30px;
+    border-radius: 9px 9px;
 }
 #container >img:nth-child(9){
     padding-left : 180px;
