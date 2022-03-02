@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        a{
+            
+            text-decoration: none;
+            color: white;
+        }
+        #Blogs-heading{
+            text-align: center;
+            border: 1px solid red;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: black;
+            
+        }
+        body {
+            margin : 0;
+        }
+        #containers {
+            background-color: black;
+            align-items : center;
+            padding-top : 30px;
+        }
+
+        #containers > img {
+            width : 330px;
+            height : 170px;
+            padding-top : 50px;
+        }
+        #container >img:nth-child(9){
+            padding-left : 180px;
+        }
+    </style>
+    <title>boat-blog</title>
+    
+</head>
+<body>
+    <div id="Blogs-heading">
+       <a href="https://www.boat-lifestyle.com/blogs/blog"><h1>boAtBlog</h1></a>
+       <div id="containers"></div>
+</div>
+
+</body>
+</html>
+<script>
+     var img_array = ["https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS.png?v=1612338251",
+                       "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271.png?v=1612338387",   
+                         "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/pro_gear.jpg?v=1644836883"
+                ];
+
+            let container = document.getElementById("containers");
+        shop();
+
+        function shop(){
+            let output = "";
+            img_array.forEach((ele) =>{
+                output += `<img src = ${ele}/>`;
+
+            });
+            container.innerHTML = output;
+        }
+        
+        container.append(img_div);
+        
+        
+</script>

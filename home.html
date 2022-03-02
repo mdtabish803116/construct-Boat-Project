@@ -119,7 +119,14 @@
         </div>
     </div>
         
-        
+        <!-- boat-blog -->
+
+        <div id="Blogs-heading">
+            <a href="https://www.boat-lifestyle.com/blogs/blog"><h1>boAtBlog</h1></a>
+            <div id="containers"></div>
+     </div>
+
+
         <!-- footer section -->
      
      
@@ -290,6 +297,26 @@
                }
           }
       setInterval(slides, 2000);
+    //   productblog
+      var img_array = ["https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS.png?v=1612338251",
+                       "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271.png?v=1612338387",   
+                         "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/pro_gear.jpg?v=1644836883"
+                ];
+
+            let container = document.getElementById("containers");
+        shop();
+
+        function shop(){
+            let output = "";
+            img_array.forEach((ele) =>{
+                output += `<img src = ${ele}/>`;
+
+            });
+            container.innerHTML = output;
+        }
+        
+        container.append(img_div);
+        
       
       
       </script>
