@@ -288,3 +288,6 @@ cartbtn.forEach(function (element) {
     displaycarditems(cartitems);
   });
 });
+
+
+ 
