@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="offers.css">
+    <link rel="stylesheet" href="home1.css">
     <title>offers-page</title>
 </head>
 <body>
+    <div class="main-div">
+        <div class="nav-header">
+
+        </div>
     <div id="offers-banner">
        <a href="#"></a><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/offer-page_strip_Web.jpg?v=1634206843" alt="banner"/></a> 
     </div>
@@ -159,10 +164,13 @@
   
     </div>
     
-
+</div>
 </body>
 </html>
-<script>
+<script type="module">
+    import navbar from './navbar.js'
+    let navheader=document.querySelector('.nav-header')
+    navheader.innerHTML=navbar()
  var data = [{img:"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Logo-01-_1.png?v=1643361798",
               dis:"Flat 25% Cashback on <br>Watch Blaze "
 

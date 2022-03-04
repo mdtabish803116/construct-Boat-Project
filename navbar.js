@@ -2,10 +2,11 @@ function navbar() {
   return `<div class="main-nav">
         <div class="nav">
           <div class="logo">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x_137f5a28-b960-4963-b1fd-e91c60e436a9_200x.png?v=1640587883"
-              alt=""
-            />
+          <a href="home1.html" id="boat-logo"> <img
+          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x_137f5a28-b960-4963-b1fd-e91c60e436a9_200x.png?v=1640587883"
+          alt=""
+        /></a>
+           
           </div>
           <div class="links">
             <ul class="lists">

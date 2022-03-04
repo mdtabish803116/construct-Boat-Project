@@ -10,8 +10,15 @@
 }
 .main-nav {
   background-color: black;
-  position: fixed;
-  z-index: 5;
+}
+.dailydealscartbtn {
+  width: 150px !important;
+  height: 40px !important;
+  border-radius: 5px !important;
+  box-sizing: border-box !important;
+  font-size: large;
+  font-weight: bold;
+  margin-top: 5% !important;
 }
 .nav {
   display: flex;
@@ -19,11 +26,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5%;
+  position: relative;
 }
 .logo {
   width: 8%;
 }
-.logo > img {
+.logo > a {
+  width: 100%;
+}
+#boat-logo > img {
   width: 100%;
 }
 .links {
@@ -69,6 +80,7 @@ li {
 }
 #shop {
   display: flex;
+  position: relative;
 }
 .down-arrow {
   color: #f5f5f5;
@@ -355,4 +367,59 @@ button {
   color: white;
   padding: 5px;
   list-style: none !important;
+}
+.morelists:hover {
+  color: #ff0000;
+}
+.bodydiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin: 5%;
+}
+.r-images {
+  width: 20px;
+  height: 20px;
+}
+.r-img {
+  width: 100%;
+}
+.r-img:hover {
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.r-images {
+  display: flex;
+  margin-top: 5%;
+}
+/* shop categories hover effects */
+#container {
+  background-color: black;
+  align-items: center;
+}
+
+#container > img {
+  width: 330px;
+  height: 150px;
+  padding-top: 5px;
+}
+#container > img:nth-child(9) {
+  padding-left: 180px;
+}
+#container1 {
+  background-color: black;
+  align-items: center;
+}
+#container1 > img {
+  width: 330px;
+  height: 150px;
+  padding-top: 5px;
+}
+#container1 > img:nth-child(9) {
+  padding-left: 180px;
+}
+.boxes {
+  background-color: blue;
+  height: 300px;
+  width: 100px;
 }
