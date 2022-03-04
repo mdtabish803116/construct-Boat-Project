@@ -10,8 +10,15 @@
 }
 .main-nav {
   background-color: black;
-  position: fixed;
-  z-index: 5;
+}
+.dailydealscartbtn {
+  width: 150px !important;
+  height: 40px !important;
+  border-radius: 5px !important;
+  box-sizing: border-box !important;
+  font-size: large;
+  font-weight: bold;
+  margin-top: 5% !important;
 }
 .nav {
   display: flex;
@@ -355,4 +362,28 @@ button {
   color: white;
   padding: 5px;
   list-style: none !important;
+}
+.morelists:hover {
+  color: #ff0000;
+}
+.bodydiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin: 5%;
+}
+.r-images {
+  width: 20px;
+  height: 20px;
+}
+.r-img {
+  width: 100%;
+}
+.r-img:hover {
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.r-images {
+  display: flex;
+  margin-top: 5%;
 }

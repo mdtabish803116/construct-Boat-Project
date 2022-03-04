@@ -243,7 +243,7 @@ more.addEventListener("mouseenter", function (e) {
     let li = document.createElement("li");
     li.setAttribute("class", "morelists");
     a.style.textDecoration = "none";
-
+    a.setAttribute("class", "alist");
     li.textContent = morelists[i];
     a.append(li);
     ul.append(li);
@@ -281,7 +281,6 @@ cartbtn.forEach(function (element) {
   element.addEventListener("click", function (e) {
     cartitems = JSON.parse(localStorage.getItem("cartitems"));
     e.preventDefault();
-    console.log("ppp");
     const boxitem = element.closest(".box");
     cartitems.push(boxitem);
     localStorage.setItem("cartitems", JSON.stringify(cartitems));
