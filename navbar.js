@@ -15,7 +15,7 @@ function navbar() {
               </a>
     
               <div class="dash"></div>
-              <a href=""> <li class="boat">boAt x Sunburn</li></a>
+              <a href="sunburn.html"> <li class="boat">boAt x Sunburn</li></a>
               <div class="dash"></div>
               <a href="dailydeals.html"><li class="daily">Daily deals</li></a>
               <div class="dash"></div>
