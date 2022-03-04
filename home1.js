@@ -264,9 +264,11 @@ more.addEventListener("mouseleave", function (e) {
   more.textContent = "More";
 });
 //Add to cart functionality
-var cartitems = [];
-localStorage.setItem("cartitems", JSON.stringify(cartitems));
+var cartitems;
 cartitems = JSON.parse(localStorage.getItem("cartitems"));
+if (!cartitems) {
+  localStorage.setItem("cartitems", JSON.stringify([]));
+}
 displaycarditems(cartitems);
 
 function displaycarditems(data) {
@@ -274,10 +276,15 @@ function displaycarditems(data) {
   spancart.textContent = data.length;
 }
 
-let cartbtn = document.querySelector(".cart-btn");
-cartbtn.addEventListener("click", function () {
-  // cartitems = JSON.parse(localStorage.getItem("cartitems"));
-  console.log("ppp");
-  const boxitem = cartbtn.closest(".box");
-  console.log(boxitem);
+let cartbtn = document.querySelectorAll(".cart-btn");
+cartbtn.forEach(function (element) {
+  element.addEventListener("click", function (e) {
+    cartitems = JSON.parse(localStorage.getItem("cartitems"));
+    e.preventDefault();
+    console.log("ppp");
+    const boxitem = element.closest(".box");
+    cartitems.push(boxitem);
+    localStorage.setItem("cartitems", JSON.stringify(cartitems));
+    displaycarditems(cartitems);
+  });
 });
