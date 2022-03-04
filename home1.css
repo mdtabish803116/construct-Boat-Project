@@ -200,7 +200,7 @@ li {
   padding-bottom: 5%;
   height: 40%;
 }
-ul li::before {
+.product-list li::before {
   content: "\2022";
   color: #e53d3d;
   font-weight: bold;
@@ -315,4 +315,12 @@ ul li::before {
 #right-arrow-red5 {
   right: 0;
   top: 120px;
+}
+/* more dropdown css */
+.morelists {
+  font-size: small;
+  font-weight: lighter;
+  color: white;
+  padding: 5px;
+  list-style: none !important;
 }
