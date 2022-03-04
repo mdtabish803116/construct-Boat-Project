@@ -47,6 +47,7 @@ function navbar() {
               alt=""
               id="cart"
             />
+            <span class="cart-item">0</span>
           </div>
         </div>
       </div>`;

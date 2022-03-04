@@ -2,7 +2,6 @@ import navbar from "./navbar.js";
 let navheader = document.querySelector(".nav-header");
 
 navheader.innerHTML = navbar();
-console.log(navbar());
 var slides = document.querySelectorAll(".slide");
 
 slides.forEach((element, i) => {
@@ -263,4 +262,22 @@ more.addEventListener("mouseleave", function (e) {
   e.preventDefault();
   more.innerHTML = "";
   more.textContent = "More";
+});
+//Add to cart functionality
+var cartitems = [];
+localStorage.setItem("cartitems", JSON.stringify(cartitems));
+cartitems = JSON.parse(localStorage.getItem("cartitems"));
+displaycarditems(cartitems);
+
+function displaycarditems(data) {
+  let spancart = document.querySelector(".cart-item");
+  spancart.textContent = data.length;
+}
+
+let cartbtn = document.querySelector(".cart-btn");
+cartbtn.addEventListener("click", function () {
+  // cartitems = JSON.parse(localStorage.getItem("cartitems"));
+  console.log("ppp");
+  const boxitem = cartbtn.closest(".box");
+  console.log(boxitem);
 });
