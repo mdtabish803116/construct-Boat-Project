@@ -287,3 +287,42 @@ cartbtn.forEach(function (element) {
     displaycarditems(cartitems);
   });
 });
+// shop category hover effect
+var img_arr = [
+  "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS.png?v=1612338251",
+  "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271.png?v=1612338387",
+  "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/pro_gear.jpg?v=1644836883",
+  "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/latest_background_b4f773ca-05d9-41cc-a7cf-3104993ae895.png?v=1612338356",
+  "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/box-5.png?v=1612338436",
+  "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Collections_5baef8f1-a67a-40a5-a537-4258c6caae6a.png?v=1622452897",
+  "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/bence-boros-253214-unsplash.jpg?v=1644836858",
+  "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/New-Category-Banners_with-Trebal_09.png?v=1615033153",
+  "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-limited-edition.png?v=1612338560",
+  "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/MISFIT-shop.png?v=1624859990",
+  "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Immortal_category_Image.png?v=1626094103",
+];
+let shop = document.getElementById("shop");
+let nav = document.querySelector(".nav-header");
+let container = document.createElement("div");
+container.setAttribute("id", "container");
+shop.addEventListener("mouseover", function (e) {
+  container.setAttribute("id", "container");
+  e.preventDefault();
+
+  let output = "";
+  img_arr.forEach((ele) => {
+    output += `<img src = ${ele}/>`;
+  });
+  container.innerHTML = output;
+  container.style.width = "100%";
+  container.style.position = "absolute";
+  container.style.height = "75vh";
+  container.style.zIndex = "5";
+  nav.append(container);
+});
+let slider = document.querySelector(".slider");
+container.addEventListener("mouseleave", function (e) {
+  e.preventDefault();
+  container.style.zIndex = "0";
+  container.removeAttribute("id");
+});

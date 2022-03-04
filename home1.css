@@ -26,11 +26,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5%;
+  position: relative;
 }
 .logo {
   width: 8%;
 }
-.logo > img {
+.logo > a {
+  width: 100%;
+}
+#boat-logo > img {
   width: 100%;
 }
 .links {
@@ -76,6 +80,7 @@ li {
 }
 #shop {
   display: flex;
+  position: relative;
 }
 .down-arrow {
   color: #f5f5f5;
@@ -386,4 +391,35 @@ button {
 .r-images {
   display: flex;
   margin-top: 5%;
+}
+/* shop categories hover effects */
+#container {
+  background-color: black;
+  align-items: center;
+}
+
+#container > img {
+  width: 330px;
+  height: 150px;
+  padding-top: 5px;
+}
+#container > img:nth-child(9) {
+  padding-left: 180px;
+}
+#container1 {
+  background-color: black;
+  align-items: center;
+}
+#container1 > img {
+  width: 330px;
+  height: 150px;
+  padding-top: 5px;
+}
+#container1 > img:nth-child(9) {
+  padding-left: 180px;
+}
+.boxes {
+  background-color: blue;
+  height: 300px;
+  width: 100px;
 }
