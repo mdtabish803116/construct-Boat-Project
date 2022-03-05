@@ -329,3 +329,8 @@ container.addEventListener("mouseleave", function (e) {
   container.style.zIndex = "0";
   container.removeAttribute("id");
 });
+let profile = document.getElementById("profile");
+profile.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href = "login.html";
+});
