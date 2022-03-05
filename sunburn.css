@@ -43,6 +43,10 @@ h1 {
    
 }
 
+ #container >div >p:nth-child(3){
+    color : red;
+ }
+
 #container >div > img {
 background-color : #dcdcdc;
 width : 410px;

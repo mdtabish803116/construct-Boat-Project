@@ -287,6 +287,9 @@ cartbtn.forEach(function (element) {
     displaycarditems(cartitems);
   });
 });
+
+
+ 
 // shop category hover effect
 var img_arr = [
   "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS.png?v=1612338251",
