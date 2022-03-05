@@ -636,6 +636,13 @@
                                                                  audio. From workouts to adventures, boAt will get you sailing!</pre>
       </div>
   </div>
+  <div class="news-sticker">
+    <marquee behavior="" direction="" scrollamount="10" id="marquee-text">
+    FLAUNT YOUR FITNESS <span class="text-stroke">FLAUNT YOUR FITNESS</span>
+    FLAUNT YOUR FITNESS <span class="text-stroke">FLAUNT YOUR FITNESS</span>
+    FLAUNT YOUR FITNESS <span class="text-stroke">FLAUNT YOUR FITNESS</span>
+    </marquee>
+  </div>
 
   <div id="footer-3">
       <div id="headlines">
@@ -758,5 +765,28 @@
     
 
     <script type="module" src="./home1.js"></script>
+
+    <script>
+          var images_1 = ["https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/Blog-Post-Diljit_1_1024x1024.jpg?v=1606208584",
+      
+      "https://i.ytimg.com/vi/iVVaezDLoTY/hqdefault.jpg",
+
+      "https://cms.qz.com/wp-content/uploads/2021/04/Screenshot-2021-04-22-at-2.00.28-PM-e1619080318526.png?quality=75&strip=all&w=1600&h=900&crop=1"
+      
+     ];
+
+var i = 0;
+function slides(){
+document.getElementById("slideimage").src = images_1[i];
+
+if(i<images_1.length-1){
+ i++;
+
+}else{
+  i=0;
+}
+}
+setInterval(slides, 2000);
+    </script>
   </body>
 </html>
