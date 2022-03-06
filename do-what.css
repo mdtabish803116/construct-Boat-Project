@@ -1,0 +1,10 @@
+body{
+    background-color: black;
+}
+#main-poster{
+    width: 100%;
+    border: 1px solid red;
+}
+img{
+    width: 100%;
+}

@@ -45,14 +45,21 @@ let container = document.getElementById("container");
 
 let sortbtn = document.getElementById("sort_item");
 
-boat(data);
+display_boat(data);
 
-let product = JSON.parse(localStorage.getItem("cart"));
+let product = JSON.parse(localStorage.getItem("cartitems"));
 if (product == null) {
-  localStorage.setItem("cart", JSON.stringify([]));
+  localStorage.setItem("cartitems", JSON.stringify([]));
+}
+/// count item at navbar 
+displaycarditems(product);
+
+function displaycarditems(data) {
+  let spancart = document.querySelector(".cart-item");
+  spancart.textContent = data.length;
 }
 
-function boat(data) {
+function display_boat(data) {
   container.innerHTML = "";
   data.forEach((user) => {
     let data_card = document.createElement("div");
@@ -78,10 +85,12 @@ function add_to_cart(prod) {
   setTimeout(function () {
     display(prod);
   }, 1000);
-  let cart = JSON.parse(localStorage.getItem("cart"));
+  let cart = JSON.parse(localStorage.getItem("cartitems"));
   cart.push(prod);
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("cartitems", JSON.stringify(cart));
+
+  displaycarditems(cart);
 }
 
 function display(prod) {
@@ -102,8 +111,56 @@ function sortProducts() {
     }
   });
   console.log(updated_data);
-  boat(updated_data);
+  display_boat(updated_data);
 }
+
+//More dropdown js
+var morelists = [
+  "Gifting",
+  "Offer zone",
+  "Do what FLoats your boAt",
+  "Meet the boAtheads",
+  "Earn rs100",
+];
+let more = document.querySelector(".more");
+more.addEventListener("mouseenter", function (e) {
+  e.preventDefault();
+  let div = document.createElement("div");
+
+  let ul = document.createElement("ul");
+  ul.style.display = "flex";
+  ul.style.flexDirection = "column";
+  ul.style.justifyContent = "space-between";
+  ul.style.height = "80%";
+  ul.style.paddingTop = "10px";
+  ul.style.paddingBottom = "10px";
+  for (var i = 0; i < morelists.length; i++) {
+    let a = document.createElement("a");
+    a.href = `${morelists[i]}.html`;
+    let li = document.createElement("li");
+    li.setAttribute("class", "morelists");
+    a.style.textDecoration = "none";
+    a.setAttribute("class", "alist");
+    li.textContent = morelists[i];
+    a.append(li);
+    ul.append(li);
+  }
+  div.append(ul);
+
+  div.style.width = "250px";
+  div.style.height = "200px";
+  div.style.backgroundColor = "black";
+  div.style.position = "absolute";
+  div.style.zIndex = "1";
+
+  more.append(div);
+});
+more.addEventListener("mouseleave", function (e) {
+  e.preventDefault();
+  more.innerHTML = "";
+  more.textContent = "More";
+});
+
 // shop category hover effect
 var img_arr = [
   "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS.png?v=1612338251",
@@ -144,3 +201,10 @@ container1.addEventListener("mouseleave", function (e) {
   container1.innerHTML = "";
   container1.removeAttribute("id");
 });
+
+let profile = document.getElementById("profile");
+profile.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.location.href = "login.html";
+});
+

@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="./home1.css" />
     <style>
         #account_box > h1{
-            padding-top: 130px;
+            padding-top: 50px;
             margin-left : 550px;
         }
 
           #box {
               width : 500px;
-              padding-top : 50px;
+              padding-top : 10px;
               margin-left : 500px;
           }
 
@@ -121,7 +121,6 @@
          if(count == 0) {  
         local_arr.push(obj);
         localStorage.setItem("local_arr_obj" , JSON.stringify(local_arr)); 
-        if(local_arr.length > 1)
         alert("You have succesfully created the account");
        
          } else {
@@ -131,8 +130,65 @@
         
     }
           
-    
+    let product = JSON.parse(localStorage.getItem("cartitems"));
+        if (product == null) {
+         localStorage.setItem("cartitems", JSON.stringify([]));
+           }
+            /// count item at navbar 
+              displaycarditems(product);
 
+             function displaycarditems(data) {
+               let spancart = document.querySelector(".cart-item");
+                 
+            spancart.textContent = data.length;
+              }
+
+//More dropdown js
+var morelists = [
+  "Gifting",
+  "Offer zone",
+  "Do what FLoats your boAt",
+  "Meet the boAtheads",
+  "Earn rs100",
+];
+let more = document.querySelector(".more");
+more.addEventListener("mouseenter", function (e) {
+  e.preventDefault();
+  let div = document.createElement("div");
+
+  let ul = document.createElement("ul");
+  ul.style.display = "flex";
+  ul.style.flexDirection = "column";
+  ul.style.justifyContent = "space-between";
+  ul.style.height = "80%";
+  ul.style.paddingTop = "10px";
+  ul.style.paddingBottom = "10px";
+  for (var i = 0; i < morelists.length; i++) {
+    let a = document.createElement("a");
+    a.href = `${morelists[i]}.html`;
+    let li = document.createElement("li");
+    li.setAttribute("class", "morelists");
+    a.style.textDecoration = "none";
+
+    li.textContent = morelists[i];
+    a.append(li);
+    ul.append(li);
+  }
+  div.append(ul);
+
+  div.style.width = "250px";
+  div.style.height = "200px";
+  div.style.backgroundColor = "black";
+  div.style.position = "absolute";
+  div.style.zIndex = "1";
+
+  more.append(div);
+});
+more.addEventListener("mouseleave", function (e) {
+  e.preventDefault();
+  more.innerHTML = "";
+  more.textContent = "More";
+});
     
 
        
