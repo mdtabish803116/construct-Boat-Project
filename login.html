@@ -114,9 +114,11 @@
 
     let f = 0;
     local_arr.forEach(function (user) {
+      if(user.id != 1){  
       if (user.email == email.value && user.password == password.value) {
         f = 1;
       }
+    }
     });
 
     if (f == 1) {
@@ -167,7 +169,7 @@ more.addEventListener("mouseenter", function (e) {
 
     li.textContent = morelists[i];
     a.append(li);
-    ul.append(li);
+    ul.append(a);
   }
   div.append(ul);
 

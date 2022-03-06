@@ -105,7 +105,7 @@ more.addEventListener("mouseenter", function (e) {
 
     li.textContent = morelists[i];
     a.append(li);
-    ul.append(li);
+    ul.append(a);
   }
   div.append(ul);
 
@@ -205,7 +205,8 @@ shop.addEventListener("mouseover", function (e) {
 let slider = document.querySelector(".slider");
 container.addEventListener("mouseleave", function (e) {
   e.preventDefault();
-  container.style.zIndex = "-1";
+  container.style.zIndex = "0";
+  container.innerHTML = "";
   container.removeAttribute("id");
 });
 

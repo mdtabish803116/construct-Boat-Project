@@ -143,7 +143,7 @@ more.addEventListener("mouseenter", function (e) {
     a.setAttribute("class", "alist");
     li.textContent = morelists[i];
     a.append(li);
-    ul.append(li);
+    ul.append(a);
   }
   div.append(ul);
 
