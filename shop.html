@@ -10,15 +10,30 @@
             margin : 0;
         }
         #container {
+            border: 1px solid red;
+            display : grid ; 
+            grid-template-columns: repeat(4 , 1fr);
             background-color: black;
-            align-items : center;
-            padding-top : 30px;
+            grid-gap : 20px;
+            align-items : left;
+            padding-right: 200px;
+            
+            
+    
         }
 
         #container > img {
-            width : 330px;
-            height : 170px;
-            padding-top : 50px;
+            width : 300px;
+        
+            
+        
+        }
+        #container >img:nth-child(1){
+            padding-left : 150px;
+        }
+
+        #container >img:nth-child(5){
+            padding-left : 150px;
         }
         #container >img:nth-child(9){
             padding-left : 180px;
