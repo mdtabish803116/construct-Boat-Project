@@ -63,9 +63,6 @@ for (var i = 0; i < 5; i++) {
     imgr.setAttribute("class", "r-img");
     //Button creation section
     let btn = document.createElement("button");
-    btn.onclick = function() {
-      add_to_cart(element);
-    }
     btn.textContent = "Add to cart";
     btn.setAttribute("class", "cart-btn");
     btn.classList.add("dailydealscartbtn");
@@ -136,38 +133,20 @@ function displaycarditems(data) {
   spancart.textContent = data.length;
 }
 
-function add_to_cart(prod) {
-  setTimeout(function () {
-    display(prod);
-  }, 1000);
-  let cart = JSON.parse(localStorage.getItem("cartitems"));
-  cart.push(prod);
-
-  localStorage.setItem("cartitems", JSON.stringify(cart));
-  displaycarditems(cart);
-
-}
-
-function display(prod) {
-  let prod_div = document.createElement("div");
-  prod_div.textContent = prod.title;
-  alert(`${prod_div.textContent}\n  Added to the cart succesfully `);
-}
-
-// let cartbtn = document.querySelectorAll(".cart-btn");
-// console.log(cartbtn);
-// cartbtn.forEach(function (element) {
-//   element.addEventListener("click", function (e) {
-//     console.log("llll");
-//     cartitems = JSON.parse(localStorage.getItem("cartitems"));
-//     e.preventDefault();
-//     console.log("ppp");
-//    const boxitem = element.closest(".box");
-//     cartitems.push(boxitem);
-//     localStorage.setItem("cartitems", JSON.stringify(cartitems));
-//     displaycarditems(cartitems);
-//   });
-// });
+let cartbtn = document.querySelectorAll(".cart-btn");
+console.log(cartbtn);
+cartbtn.forEach(function (element) {
+  element.addEventListener("click", function (e) {
+    console.log("llll");
+    cartitems = JSON.parse(localStorage.getItem("cartitems"));
+    e.preventDefault();
+    console.log("ppp");
+    const boxitem = element.closest(".box");
+    cartitems.push(boxitem);
+    localStorage.setItem("cartitems", JSON.stringify(cartitems));
+    displaycarditems(cartitems);
+  });
+});
 
 // shop category hover effect
 var img_arr = [
