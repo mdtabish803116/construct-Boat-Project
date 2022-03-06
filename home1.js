@@ -2,6 +2,7 @@ import navbar from "./navbar.js";
 let navheader = document.querySelector(".nav-header");
 
 navheader.innerHTML = navbar();
+console.log(navheader);
 var slides = document.querySelectorAll(".slide");
 
 slides.forEach((element, i) => {
@@ -44,6 +45,228 @@ btnLeft.addEventListener("click", function () {
     element.style.transform = `translateX(${100 * (i - curslide)}%)`;
   });
 });
+var bsdata = [
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28.png?v=1642405569",
+    title: "boAt Airdopes 131 - Wireless Earbuds",
+    price: "Rs. 1,299.00",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333_300x.png?v=1641801662",
+    title: "boAt Airdopes 131 - Wireless Earbuds",
+    price: "Rs. 1,299.00",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/merucry-3_300x.png?v=1639400858",
+    title: "boAt Airdopes 131 - Wireless Earbuds",
+    price: "Rs. 1,299.00",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333_300x.png?v=1641801662",
+    title: "boAt Airdopes 131 - Wireless Earbuds",
+    price: "Rs. 1,299.00",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+];
+var jldata = [
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_6370be21-3c2f-48a8-bb18-edc49a667081_300x.png?v=1643619646",
+    title: "boAt Bassheads 950v2",
+    price: "Rs. 899",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_affc1a7f-f714-4952-9c58-3de269539350_300x.png?v=1645099233",
+    title: "boAt Bassheads 950v2",
+    price: "Rs. 899",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_65ff249b-c4f8-4dad-ae88-2aae76723ce2_300x.png?v=1643477993",
+    title: "boAt Bassheads 950v2",
+    price: "Rs. 899",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_b6563f96-f1a1-4915-b686-d4e37232ec3c_300x.png?v=1644301638",
+    title: "boAt Bassheads 950v2",
+    price: "Rs. 899",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_099e5dad-39c3-4ef5-8fc2-6d9b5ca8bb91_300x.png?v=1642569325",
+    title: "boAt Bassheads 950v2",
+    price: "Rs. 899",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_6370be21-3c2f-48a8-bb18-edc49a667081_300x.png?v=1643619646",
+    title: "boAt Bassheads 950v2",
+    price: "Rs. 899",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+];
+let swdata = [
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/merucry-3_300x.png?v=1639400858",
+    title: "boAt Watch Mercury",
+    price: "Rs. 2,499.00",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_529ecf13-c993-4fe7-a2d6-9357f1a47db4_300x.png?v=1645164257",
+    title: "boAt Watch Mercury",
+    price: "Rs. 2499",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1bca7fb9-5f5c-42e3-930a-8a430d8a9e60_300x.png?v=1625046217",
+    title: "boAt Watch Mercury",
+    price: "Rs. 2499",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_black_40d014f0-4495-47a8-bad5-2495ae08d379_300x.png?v=1635140773",
+    title: "boAt Watch Mercury",
+    price: "Rs. 2499",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/9da7e1ae-89f2-42c4-9714-76ac5ec83817_300x.png?v=1625045743",
+    title: "boAt Watch Mercury",
+    price: "Rs. 2499",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_6370be21-3c2f-48a8-bb18-edc49a667081_300x.png?v=1643619646",
+    title: "boAt Bassheads 950v2",
+    price: "Rs. 899",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+];
+let twdata = [
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/553af994-244a-4b81-9d9e-9967a1b966b3_300x.png?v=1625046259",
+    title: "boAt Rockerz 255 Pro+",
+    price: "Rs. 1,349.00",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/103_300x.png?v=1574927262",
+    title: "boAt Rockerz 255 Pro+",
+    price: "Rs. 1,349.00",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8ec58553-3255-48ec-929e-4838215b640c_300x.png?v=1625046271",
+    title: "boAt Rockerz 255 Pro+",
+    price: "Rs. 1,349.00",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+  {
+    img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/eab9128d-65cf-42ce-83a1-03492ec6157d_300x.png?v=1625046386",
+    title: "boAt Rockerz 255 Pro+",
+    price: "Rs. 1,349.00",
+    li: `<li>Lightweight for portability</li>
+    <li>Uninterrupted listening for 3 hours</li>
+    <li>Truly wireless at a truly awesome price</li>`,
+  },
+];
+//Add to cart functionality
+var cartitems;
+cartitems = JSON.parse(localStorage.getItem("cartitems"));
+if (!cartitems) {
+  localStorage.setItem("cartitems", JSON.stringify([]));
+}
+displaycarditems(cartitems);
+
+//Main data
+var maindata = [bsdata, jldata, [], swdata, twdata];
+maindata.forEach(function (el, i) {
+  el.forEach(function (element) {
+    if (i !== 2) {
+      let box = document.createElement("div");
+      box.setAttribute("class", "box");
+      box.classList.add(`box-${i + 1}`);
+      let img = document.createElement("img");
+      img.src = element.img;
+      let content = document.createElement("div");
+      content.setAttribute("class", "content");
+      let title = document.createElement("p");
+      title.setAttribute("class", "title");
+      title.textContent = element.title;
+      let price = document.createElement("p");
+      price.setAttribute("class", "price");
+      price.textContent = element.price;
+      let ul = document.createElement("ul");
+      ul.setAttribute("class", "product-list");
+      ul.innerHTML = element.li;
+      let button = document.createElement("button");
+      button.type = "button";
+      button.setAttribute("class", "cart-btn");
+      button.textContent = "Add to cart";
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        cartitems = JSON.parse(localStorage.getItem("cartitems"));
+        cartitems.push(element);
+        localStorage.setItem("cartitems", JSON.stringify(cartitems));
+        displaycarditems(cartitems);
+      });
+      content.append(title, price, ul, button);
+      box.append(img, content);
+      let smallcontainer = document.querySelector(`.smc-${i + 1}`);
+      smallcontainer.append(box);
+    }
+  });
+});
+//Diaplay cartitems
+// function displaycarditems(data) {
+//   let spancart = document.querySelector(".cart-item");
+//   spancart.textContent = data.length;
+// }
+
 // ALL SLIDER COMPONENTS
 var curcard = 0;
 let cards = document.querySelectorAll(".box-1");
