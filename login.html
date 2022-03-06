@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <link rel="stylesheet" href="./home1.css" />
     <style>
+<<<<<<< HEAD
+      #shop_container > h1 {
+        padding-top: 150px;
+        margin-left: 630px;
+      }
+      #box {
+        width: 500px;
+        margin-top: 80px;
+        margin-left: 500px;
+      }
+
+      #box > div {
+        padding-top: 20px;
+      }
+
+      #email {
+        padding-right: 272px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        outline: none;
+        border: 1px solid black;
+      }
+
+      #password {
+        border: none;
+        outline: none;
+      }
+
+      #box > div:nth-child(4) {
+        width: 450px;
+        border: 1px solid black;
+        margin-top: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      #box > div > a {
+        margin-left: 280px;
+        text-decoration: none;
+        color: black;
+      }
+
+      #box > div:nth-child(5) {
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        margin-top: 20px;
+        width: 455px;
+        border-radius: 10px;
+        text-align: center;
+        padding-bottom: 12px;
+        padding-top: 12px;
+      }
+
+      #box > div:nth-child(6) > a {
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 50px;
+      }
+=======
 
           #shop_container > h1{
               padding-top : 150px;
@@ -72,67 +133,63 @@
             margin-left : 0px;
         }
         
+>>>>>>> bfe4ccaab740b2bf9e2aadc14cc7c25cf179818f
     </style>
-</head>
-<body>
-    <div id = "header"></div>
-    <div id = shop_container></div>
-</body>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="shop_container"></div>
+  </body>
 </html>
- <script type = "module">
-     let header = document.getElementById("header");
-     let shop_container = document.getElementById("shop_container");
+<script type="module">
+  let header = document.getElementById("header");
+  let shop_container = document.getElementById("shop_container");
 
-     import navbar from "./navbar.js";
-      header.innerHTML = navbar();
+  import navbar from "./navbar.js";
+  header.innerHTML = navbar();
 
-      import login from "./login.js";
-        shop_container.innerHTML = login();
+  import login from "./login.js";
+  shop_container.innerHTML = login();
 
+  let local_arr = JSON.parse(localStorage.getItem("local_arr_obj"));
+  if (local_arr == null) {
+    localStorage.setItem("local_arr_obj", JSON.stringify([]));
+  }
 
-        let local_arr = JSON.parse(localStorage.getItem("local_arr_obj"));
-        if(local_arr == null){
-            localStorage.setItem("local_arr_obj" , JSON.stringify([]));
-        }
+  let email = document.getElementById("email");
+  let password = document.getElementById("password");
 
-        let email = document.getElementById("email");
-        let password = document.getElementById("password");
+  let sign_btn = document.getElementById("sign");
 
-        let sign_btn = document.getElementById("sign");
+  sign_btn.addEventListener("click", sign_in);
 
-           sign_btn.addEventListener("click" , sign_in);
+  function sign_in() {
+    if (email.value == "") {
+      alert("Email should not be empty !");
+    }
 
-           function sign_in(){
-            if(email.value == ""){
-           alert("Email should not be empty !");
-               }
+    if (password.value == "") {
+      alert("Password should not be empty !");
+    }
 
-              if(password.value == ""){
-            alert("Password should not be empty !");
-             }   
-           
+    let local_arr = JSON.parse(localStorage.getItem("local_arr_obj"));
 
-             let local_arr = JSON.parse(localStorage.getItem("local_arr_obj"));
+    let f = 0;
+    local_arr.forEach(function (user) {
+      if (user.email == email.value && user.password == password.value) {
+        f = 1;
+      }
+    });
 
-               let f = 0;
-             local_arr.forEach(function(user){
-                 if(user.id != 1){  
-                     if(user.email == email.value && user.password == password.value){
-                       f = 1;
-                    }
-             }
-
-             });
-
-             if (f == 1){
-                window.location.href = "home1.html";
-             }else {
-                 alert("wrong email & password !");
-             }
-                  
-                      
-         }
-
+<<<<<<< HEAD
+    if (f == 1) {
+      window.location.href = "home1.html";
+    } else {
+      alert("wrong email & password !");
+    }
+  }
+</script>
+=======
          let product = JSON.parse(localStorage.getItem("cartitems"));
         if (product == null) {
          localStorage.setItem("cartitems", JSON.stringify([]));
@@ -193,3 +250,4 @@ more.addEventListener("mouseleave", function (e) {
   more.textContent = "More";
 });
  </script>
+>>>>>>> bfe4ccaab740b2bf9e2aadc14cc7c25cf179818f
