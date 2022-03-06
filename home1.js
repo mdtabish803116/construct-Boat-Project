@@ -2,7 +2,7 @@ import navbar from "./navbar.js";
 let navheader = document.querySelector(".nav-header");
 
 navheader.innerHTML = navbar();
-console.log(navheader);
+
 var slides = document.querySelectorAll(".slide");
 
 slides.forEach((element, i) => {
