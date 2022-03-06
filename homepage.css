@@ -249,8 +249,9 @@ p {
 }
 .icons1 {
   display: flex;
-  /* border: 1px solid orangered; */
+   border: 1px solid orangered; 
   margin-top: 10%;
+  /* background-color:white; */
 }
 .icons1 > div {
   margin: 8px;
