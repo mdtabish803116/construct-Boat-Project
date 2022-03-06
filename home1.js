@@ -548,6 +548,7 @@ let slider = document.querySelector(".slider");
 container.addEventListener("mouseleave", function (e) {
   e.preventDefault();
   container.style.zIndex = "0";
+  container.innerHTML = "";
   container.removeAttribute("id");
 });
 let profile = document.getElementById("profile");
