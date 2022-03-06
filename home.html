@@ -12,7 +12,7 @@
         
     </head>
     <body>
-
+<!-- banner -->
 
         <div id="image-cont_1">
             <div class="image">
@@ -107,7 +107,7 @@
        <!-- sliding photo -->
 
        
-       <div class="boltbox">
+       <div class="box">
         <div class="slideshow">
     
             <img src="https://techcrunch.com/wp-content/uploads/2021/01/boat-lifestyle.jpg" alt="Hardik" id="slideimage">
@@ -123,7 +123,7 @@
 
         <div id="Blogs-heading">
             <a href="https://www.boat-lifestyle.com/blogs/blog"><h1>boAtBlog</h1></a>
-            <div id="containers1"></div>
+            <div id="containers"></div>
             <br>
             <br>
             <div class="line" style="width: 60%;margin-left: 5px;background-color : red;"></div>
@@ -275,7 +275,7 @@
     </div>
      <div id="built">
          <div><p>DOWNLOAD THE APP</p></div>
-         <div class="boltbox">
+         <div class="box">
         <div><button id="size"><i class="fa fa-playstore">GEt it on playStore</i></button></div>
         </div>
         <!-- left playstore icon and AppleStore icon in button please if you can do it please... -->
@@ -293,7 +293,7 @@
     </html>
 
     <script>
-        var images = ["https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/Blog-Post-Diljit_1_1024x1024.jpg?v=1606208584",
+        var images_1 = ["https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/Blog-Post-Diljit_1_1024x1024.jpg?v=1606208584",
       
                        "https://i.ytimg.com/vi/iVVaezDLoTY/hqdefault.jpg",
       
@@ -303,9 +303,9 @@
       
           var i = 0;
           function slides(){
-             document.getElementById("slideimage").src = images[i];
+             document.getElementById("slideimage").src = images_1[i];
          
-               if(i<images.length-1){
+               if(i<images_1.length-1){
                   i++;
       
                }else{
@@ -319,7 +319,7 @@
                          "https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/BLAZE-BLOG_460x.jpg?v=1646201420"
                 ];
 
-            let container = document.getElementById("containers1");
+            let container = document.getElementById("containers");
         shop();
 
         function shop(){

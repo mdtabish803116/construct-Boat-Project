@@ -91,7 +91,7 @@ body {
   display: inline;
   width: 80%;
   /* width: 100px; */
-  border: 1px solid greenyellow;
+  /* border: 1px solid greenyellow; */
   /* margin: 10px; */
   padding: 15px;
   color: rgba(0, 0, 0, 0.877);
@@ -184,16 +184,17 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid green;
+ 
 }
 #headlines div {
   color: white;
+  margin-left: 20px;
 }
 #input-footer {
   margin-top: 40px;
 }
 #f-cont {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   margin-left: 520px;
 }
 table {
@@ -215,7 +216,7 @@ a {
 }
 #built {
   display: flex;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   color: white;
   margin: 220px;
   margin-top: 5%;
@@ -236,6 +237,7 @@ p {
 }
 #size2 {
   padding: 10px;
+  width: 100%;
   border-radius: 10px;
 }
 .copyright {
@@ -244,7 +246,7 @@ p {
 }
 .icons1 {
   display: flex;
-  border: 1px solid orangered;
+  /* border: 1px solid orangered; */
   margin-top: 10%;
 }
 .icons1 > div {

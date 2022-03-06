@@ -1,6 +1,14 @@
 body{
     margin-top: none;
     background-color: rgba(0, 0, 0, 0.966);
+
+}
+.section--text-text-center{
+    border: 1px solid red;
+    color: blanchedalmond;
+}
+.section--text-text-center>h2 p{
+    text-align: center;
 }
 #offers-banner{
     width: 100%;
