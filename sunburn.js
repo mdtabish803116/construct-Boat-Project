@@ -113,6 +113,54 @@ function sortProducts() {
   console.log(updated_data);
   display_boat(updated_data);
 }
+
+//More dropdown js
+var morelists = [
+  "Gifting",
+  "Offer zone",
+  "Do what FLoats your boAt",
+  "Meet the boAtheads",
+  "Earn rs100",
+];
+let more = document.querySelector(".more");
+more.addEventListener("mouseenter", function (e) {
+  e.preventDefault();
+  let div = document.createElement("div");
+
+  let ul = document.createElement("ul");
+  ul.style.display = "flex";
+  ul.style.flexDirection = "column";
+  ul.style.justifyContent = "space-between";
+  ul.style.height = "80%";
+  ul.style.paddingTop = "10px";
+  ul.style.paddingBottom = "10px";
+  for (var i = 0; i < morelists.length; i++) {
+    let a = document.createElement("a");
+    a.href = `${morelists[i]}.html`;
+    let li = document.createElement("li");
+    li.setAttribute("class", "morelists");
+    a.style.textDecoration = "none";
+    a.setAttribute("class", "alist");
+    li.textContent = morelists[i];
+    a.append(li);
+    ul.append(li);
+  }
+  div.append(ul);
+
+  div.style.width = "250px";
+  div.style.height = "200px";
+  div.style.backgroundColor = "black";
+  div.style.position = "absolute";
+  div.style.zIndex = "1";
+
+  more.append(div);
+});
+more.addEventListener("mouseleave", function (e) {
+  e.preventDefault();
+  more.innerHTML = "";
+  more.textContent = "More";
+});
+
 // shop category hover effect
 var img_arr = [
   "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS.png?v=1612338251",
