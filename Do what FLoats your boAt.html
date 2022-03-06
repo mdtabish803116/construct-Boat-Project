@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="do-what.css">
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="home1.css">
     <title>Do-what-floats-your-boat</title>
 </head>
 <body>
+    <div class="nav-header"></div>
     <div id="main-poster">
         <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/E-mailer-2000x1000_dekstop.jpg?v=1633069883" alt="posters" style="width: 100%;border: 1px solid red;">
     </div>
@@ -200,7 +202,14 @@
          
           </div>
           
-      
+      <script type="module">
+          
+
+          import navbar from './navbar.js'
+
+          let nav=document.querySelector('.nav-header')
+          nav.innerHTML=navbar()
+      </script>
 </body>
 </html>
 </body>

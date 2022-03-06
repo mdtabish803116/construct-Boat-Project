@@ -8,9 +8,11 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <link rel="stylesheet" href="earn.css">
 <link rel="stylesheet" href="homepage.css">
+<link rel="stylesheet" href="home1.css">
     <title>Earn100</title>
 </head>
 <body>
+    <div class="nav-header"></div>
     <!-- banners -->
     <div id="image_earn">
         <div><img src="https://clientcdn.notifyvisitors.com/boat/logo.png" alt=""></div>
@@ -299,7 +301,11 @@
  
   </div>
 
-
+<script type="module">
+    import navbar from './navbar.js'
+    let nav=document.querySelector('.nav-header')
+    nav.innerHTML=navbar()
+</script>
 
 
 </body>
