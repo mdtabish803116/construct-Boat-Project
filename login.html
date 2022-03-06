@@ -114,9 +114,11 @@
 
     let f = 0;
     local_arr.forEach(function (user) {
+      if(user.id != 1){  
       if (user.email == email.value && user.password == password.value) {
         f = 1;
       }
+    }
     });
 
     if (f == 1) {

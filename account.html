@@ -121,6 +121,7 @@
          if(count == 0) {  
         local_arr.push(obj);
         localStorage.setItem("local_arr_obj" , JSON.stringify(local_arr)); 
+        if (email.value != ""&&password.value != ""&&first_name.value != "" &&last_name.value != "")  
         alert("You have succesfully created the account");
        
          } else {
