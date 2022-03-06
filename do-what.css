@@ -1,10 +1,15 @@
 body{
     background-color: black;
 }
-#main-poster{
+ #main-poster{
     width: 100%;
     border: 1px solid red;
 }
-img{
+/* img{
     width: 100%;
+}  */
+.moving-image{
+    display: flex;
+    /* margin: 10px; */
+    border: 1px solid red;
 }

@@ -220,9 +220,12 @@ a {
   color: white;
   margin: 220px;
   margin-top: 5%;
+  
 }
-#built > div {
-  margin: auto;
+#built  div  p img{
+  flex-direction: row;
+  
+
 }
 p {
   font-weight: 500;
