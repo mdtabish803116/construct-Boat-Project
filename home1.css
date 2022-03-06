@@ -4,7 +4,10 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
-.main-div {
+body {
+  overflow-x: hidden;
+}
+*/ .main-div {
   width: 100%;
   background-color: black;
 }
@@ -26,6 +29,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5%;
+  position: relative;
+}
+.nav-header {
   position: relative;
 }
 .logo {
@@ -422,4 +428,23 @@ button {
   background-color: blue;
   height: 300px;
   width: 100px;
+}
+.sidebar {
+  width: 400px;
+  background-color: white;
+  height: 100vh;
+  color: black;
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  transition: transform 1s;
+}
+
+.sidebartoggle {
+  transform: translateX(100%);
+}
+.cart-header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  font-weight: bold;
 }
