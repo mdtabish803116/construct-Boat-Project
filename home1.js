@@ -592,7 +592,7 @@ function updateCartview() {
     });
     let cartfooter = document.createElement("div");
     let contShop = document.createElement("a");
-    contShop.href = "home1.html";
+    contShop.href = "index.html";
     contShop.style.textDecoration = "none";
     contShop.style.color = "Red";
     contShop.style.fontSize = "large";

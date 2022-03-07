@@ -16,7 +16,7 @@ function login(){
            <div id = "sign">Sign in</div>
 
            <div>
-             <a href = "home1.html">Back to Home Page</a>
+             <a href = "index.html">Back to Home Page</a>
              <a href = "account.html">Create account</a>
            </div>
            </div> `

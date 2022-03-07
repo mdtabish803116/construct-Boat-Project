@@ -26,7 +26,7 @@
            <div id = "create">Create</div>
 
            <div>
-              <a href = "home1.html" id = "last">Return to Home Page</a>
+              <a href = "index.html" id = "last">Return to Home Page</a>
            </div> 
            </div>`
   }
