@@ -449,3 +449,12 @@ button {
   padding: 10px;
   font-weight: bold;
 }
+#cart {
+  cursor: pointer;
+}
+#profile {
+  cursor: pointer;
+}
+img {
+  cursor: pointer;
+}
