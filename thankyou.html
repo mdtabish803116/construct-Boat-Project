@@ -36,6 +36,12 @@
       import navbar from "./navbar.js";
       let nav = document.querySelector(".nav-header");
       nav.innerHTML = navbar();
+      function displaycarditems(data) {
+        let spancart = document.querySelector(".cart-item");
+        spancart.textContent = data.length;
+      }
+      let cartitems = JSON.parse(localStorage.getItem("cartitems"));
+      displaycarditems(cartitems);
     </script>
   </body>
 </html>
