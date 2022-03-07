@@ -51,7 +51,7 @@ let product = JSON.parse(localStorage.getItem("cartitems"));
 if (product == null) {
   localStorage.setItem("cartitems", JSON.stringify([]));
 }
-/// count item at navbar 
+/// count item at navbar
 displaycarditems(product);
 
 function displaycarditems(data) {
@@ -208,3 +208,93 @@ profile.addEventListener("click", function (e) {
   window.location.href = "login.html";
 });
 
+let sidebar = document.createElement("div");
+sidebar.setAttribute("class", "sidebar");
+header.append(sidebar);
+var toggle = 0;
+const cart_button = document.getElementById("cart");
+cart_button.addEventListener("click", function (e) {
+  e.preventDefault();
+  console.log(sidebar);
+  if (toggle === 0) {
+    sidebar.classList.add("sidebartoggle");
+    toggle = 1;
+  } else {
+    sidebar.classList.remove("sidebartoggle");
+    toggle = 0;
+  }
+});
+
+function updateCartview() {
+  let localcartitems = JSON.parse(localStorage.getItem("cartitems"));
+  if (localcartitems.length !== 0) {
+    sidebar.innerHTML = "";
+    sidebar.style.display = "block";
+    console.log(localcartitems.length);
+    sidebar.style.overflowY = "scroll";
+    let cartheader = document.createElement("div");
+    cartheader.setAttribute("class", "cart-header");
+    cartheader.textContent = `YOUR CART (${localcartitems.length} item)`;
+    sidebar.append(cartheader);
+    localcartitems.forEach(function (element) {
+      let cartcard = document.createElement("div");
+      cartcard.style.display = "flex";
+      cartcard.style.justifyContent = "space-between";
+      cartcard.style.alignItems = "center";
+      let img = document.createElement("img");
+      img.src = element.img;
+      img.style.width = "100px";
+      img.style.height = "100px";
+      let title = document.createElement("p");
+      title.textContent = ` Product name: ${element.title}`;
+      let price = document.createElement("p");
+      price.textContent = `PRICE: ${element.price}`;
+      cartcard.append(img, title, price);
+      sidebar.append(cartcard);
+    });
+    let cartfooter = document.createElement("div");
+    let contShop = document.createElement("a");
+    contShop.href = "home1.html";
+    contShop.style.textDecoration = "none";
+    contShop.style.color = "Red";
+    contShop.style.fontSize = "large";
+    contShop.textContent = "Continue shopping";
+    let paybtn = document.createElement("button");
+    paybtn.type = "button";
+    paybtn.style.width = "300px";
+    paybtn.style.padding = "10px";
+    paybtn.textContent = "Continue for payment";
+    paybtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.location.href = "payment.html";
+    });
+    paybtn.style.backgroundColor = "#ff0000";
+    paybtn.style.color = "white";
+    paybtn.style.borderRadius = "3px";
+    paybtn.style.border = "none";
+    cartfooter.style.display = "flex";
+    cartfooter.style.flexDirection = "column";
+    cartfooter.style.marginTop = "30%";
+    cartfooter.style.marginLeft = "15%";
+    contShop.style.marginBottom = "5%";
+    cartfooter.style.alignItems = "center";
+    cartfooter.append(contShop, paybtn);
+    sidebar.append(cartfooter);
+  } else {
+    sidebar.innerHTML = "";
+    let img = document.createElement("img");
+    img.src =
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/bag_925d9ab5-b7d8-4b86-bfc5-2cb9b4df471e.png?v=1633452372";
+    let h4 = document.createElement("h4");
+    h4.textContent = "YOUR COLLECTION IS EMPTY";
+    h4.style.color = "#ff0000";
+    h4.style.marginTop = "10%";
+    let div = document.createElement("div");
+    sidebar.style.display = "flex";
+    sidebar.style.justifyContent = "center";
+    sidebar.style.alignItems = "center";
+    div.append(img, h4);
+    sidebar.append(div);
+  }
+}
+updateCartview();

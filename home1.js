@@ -569,6 +569,7 @@ function updateCartview() {
     sidebar.innerHTML = "";
     sidebar.style.display = "block";
     console.log(localcartitems.length);
+    sidebar.style.overflowY = "scroll";
     let cartheader = document.createElement("div");
     cartheader.setAttribute("class", "cart-header");
     cartheader.textContent = `YOUR CART (${localcartitems.length} item)`;
