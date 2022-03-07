@@ -601,6 +601,10 @@ function updateCartview() {
     paybtn.style.width = "300px";
     paybtn.style.padding = "10px";
     paybtn.textContent = "Continue for payment";
+    paybtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.location.href = "payment.html";
+    });
     paybtn.style.backgroundColor = "#ff0000";
     paybtn.style.color = "white";
     paybtn.style.borderRadius = "3px";
